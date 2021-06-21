@@ -1,0 +1,209 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.hero {
+    background-image: linear-gradient(transparent 25%, black), url(bilder/hero.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center top;
+    padding: 3% 5% 5% 5%;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+h1 {
+    margin: 0;
+    font-size: max(7vw, 1.7em);
+    text-shadow: 2px 2px 2px black;
+}
+
+.einleitung {
+    font-size: 1.5em;
+    line-height: 1.7;
+    width: 65%;
+    margin: auto;
+    text-shadow: 1px 1px 1px black;
+}
+
+.button {
+    background-image: linear-gradient(#d3cdc5, #3a342c);
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 5px black;
+    border-radius: 10%/50%;
+    box-shadow: inset 0px 0px 10px black;
+}
+
+.einleitung-button {
+    margin: 0 auto;
+    font-size: max(1.2em, 1.65vw);
+    padding: 16px 30px;
+    border: 5px solid silver;
+}
+
+.hover-button:hover {
+    box-shadow: inset 0px 0px 10px black, 0px 0px 15px #d3cdc5;
+}
+
+.angebotsbereich {
+    padding: 0% 5%;
+}
+
+.icon-zeile {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    font-size: max(4vw, 3em);
+    color: #a39785;
+    margin: 1%;
+}
+
+h2 {
+    text-align: center;
+    font-size: max(4vw, 1.6em);
+    text-decoration: underline #a39785;
+    margin-top: 0;
+}
+
+.kreiszeile {
+    display: flex;
+    margin: 50px 0;
+    justify-content: space-between;
+}
+
+.kreisbehaelter {
+    width: 25%;
+}
+
+.kreis {
+    background-image: url(bilder/kreis.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 100%;
+    position: relative;
+}
+
+.kreisinhalt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h3 {
+    font-size: max(1.5vw, 1.25em);
+}
+
+.kreistext {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.angebotstabelle {
+    display: flex;
+    flex-direction: column;
+    font-size: max(1em, 1.25vw);
+}
+
+.angebotszeile {
+    display: flex;
+    padding: 2%;
+    align-items: center;
+}
+
+.angebotszeile:nth-child(2n) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.angebotszeile:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.angebotsname {
+    width: 25%;
+    font-weight: bold;
+}
+
+.angebotspreis {
+    width: 50%;
+}
+
+.angebotsbuttonspalte {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.angebotsbutton {
+    padding: 10px 20px;
+}
+
+footer {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-button {
+    padding: 16px 30px;
+    margin: 0 auto 20px auto;
+    border: 5px solid silver;
+    font-size: x-large;
+}
+
+.social-link {
+    text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    .kreiszeile {
+        flex-direction: column;
+    }
+
+    .kreisbehaelter {
+        width: 50%;
+        margin: 2% auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .einleitung {
+        width: 100%;
+        font-size: 1.1em;
+        line-height: 1.3;
+    }
+
+    .kreisbehaelter {
+        width: 100%;
+    }
+
+    .angebotszeile {
+        flex-direction: column;
+    }
+    
+    .angebotsspalte {
+        width: 100%;
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    .angebotsbuttonspalte {
+        justify-content: center;
+    }
+}
